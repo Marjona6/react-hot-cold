@@ -1,5 +1,6 @@
 import React from 'react';
 
+// import all the components
 import Header from './header';
 import GuessSection from './guess-section';
 import GuessCount  from './guess-count';
@@ -9,12 +10,14 @@ export default class Game extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            // all of this data stays internal to the Game component
             guesses: [],
             feedback: 'Make your guess!',
             correctAnswer: Math.floor(Math.random() * 100) + 1,
         };
     }
 
+// a function to start a new game; clears out guesses
     newGame() {
         this.setState({
             guesses: [],

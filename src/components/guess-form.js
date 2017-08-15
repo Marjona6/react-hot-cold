@@ -6,6 +6,7 @@ export default class GuessForm extends React.Component {
     onGuess(event) {
         event.preventDefault();
 
+// don't understand this if statement here; what exactly is it checking for?
         if (this.props.onGuess) {
             const value = this.input.value;
             this.props.onGuess(value);
