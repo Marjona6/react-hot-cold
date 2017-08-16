@@ -12,7 +12,7 @@ export default class Game extends React.Component {
         this.state = {
             // all of this data stays internal to the Game component
             guesses: [],
-            feedback: 'Make your guess!',
+            feedback: 'Take a guess!',
             correctAnswer: Math.floor(Math.random() * 100) + 1,
         };
     }
@@ -21,7 +21,7 @@ export default class Game extends React.Component {
     newGame() {
         this.setState({
             guesses: [],
-            feedback: 'Make your guess!',
+            feedback: 'Take a guess!',
             correctAnswer: Math.floor(Math.random() * 100) + 1,
         });
     }
