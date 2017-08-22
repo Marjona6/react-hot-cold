@@ -1,8 +1,9 @@
 import React from 'react';
+import {connect} from 'react-redux';
 
 import './guess-count.css';
 
-export default function GuessCount(props) {
+export function GuessCount(props) {
 	// props is passed in as a parameter
 	// no need to declare constructor, super, or state here
 	// because it is a "dumb" component!
@@ -12,3 +13,9 @@ export default function GuessCount(props) {
         </p>
     );
 }
+
+const mapStateToProps = state => ({
+	count: state.guesses.length
+});
+
+export default connect(mapStateToProps)(GuessCount);
